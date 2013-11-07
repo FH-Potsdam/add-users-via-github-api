@@ -11,6 +11,7 @@ This should stay a secret it has read write acces to all your repos.
 
 - create a team https://github.com/organizations/[YOUR ORGANIZATION]/teams
 - get the id of the team  
+
 -----------------
 
     #!/bin/bash
