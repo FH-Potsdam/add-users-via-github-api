@@ -6,10 +6,10 @@ add users from shell script
 
 
 - get a token like in this guide:
-[https://help.github.com/articles/creating-an-access-token-for-command-line-use](https://help.github.com/articles/creating-an-access-token-for-command-line-use)
+[https://help.github.com/articles/creating-an-access-token-for-command-line-use](https://help.github.com/articles/creating-an-access-token-for-command-line-use)  
 This should stay a secret it has read write acces to all your repos.  
 
-- create a team https://github.com/organizations/[YOUR ORGANIZATION]/teams
+- create a team https://github.com/organizations/[YOUR_ORGANIZATION]/teams
 - get the id of the team  
 
 -----------------
