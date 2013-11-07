@@ -1,18 +1,45 @@
 add-users-via-github-api
 ========================
 
-just a test to add users from shell script
+add users from shell script
 
-get token like in this guide:
+
+
+- get a token like in this guide:
 [https://help.github.com/articles/creating-an-access-token-for-command-line-use](https://help.github.com/articles/creating-an-access-token-for-command-line-use)
-this should stay a secret it has read write acces to all your repos  
+This should stay a secret it has read write acces to all your repos.  
+
+- create a team https://github.com/organizations/[YOUR ORGANIZATION]/teams
+- get the id of the team  
+-----------------
 
     #!/bin/bash
-    # get the id of the team via
     yourusername="user-name"
     token="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
     response=$(curl -u "$yourusername:$token" https://api.github.com/orgs/:org/teams)
     echo $response
+
+
+- add all users  
+
+-----------------
+
+    #!/bin/bash
+    token="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+    yourusername="user-name"
+    team="123456"
+    # all the users
+    users=("foo" "bah" "foobah" )
+    #loop all users
+    #
+    #
+    for i in "${users[@]}"
+    do
+       :
+       # do whatever on $i
+       $(curl -i -u "$yourusername:$token" -X PUT -d "" https://api.github.com/teams/$team/members/$i)
+    done
+
 
 
 Copyright (c)  2013 Fabian "fabiantheblind" Morón Zirfas  
